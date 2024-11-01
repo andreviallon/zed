@@ -1,17 +1,138 @@
-
 [
   {
-    "context": "Editor",
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
-      "cmd-shift-r": "editor::Rename",
-      "cmd-shift-1": "editor::ToggleComments",
-      "cmd-alt-c": "editor::CopyRelativePath"
+      "space g h d": "editor::ToggleHunkDiff",
+      "space g h r": "editor::RevertSelectedHunks",
+
+      "space t i": "editor::ToggleInlayHints",
+
+      "space m p": "markdown::OpenPreview",
+      "space m P": "markdown::OpenPreviewToTheSide",
+
+      "space f p": "projects::OpenRecent",
+      "space f s": "pane::DeploySearch",
+
+      "space a i": "assistant::InlineAssist",
+
+      "g f": "editor::OpenExcerpts",
+
+      "g c": "editor::ToggleComments"
     }
   },
   {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+
+      "space c a": "editor::ToggleCodeActions",
+      "space c r": "editor::Rename",
+      "g d": "editor::GoToDefinition",
+      "g D": "editor::GoToDefinitionSplit",
+      "g i": "editor::GoToImplementation",
+      "g I": "editor::GoToImplementationSplit",
+      "g t": "editor::GoToTypeDefinition",
+      "g T": "editor::GoToTypeDefinitionSplit",
+      "g r": "editor::FindAllReferences",
+      "] d": "editor::GoToDiagnostic",
+      "[ d": "editor::GoToPrevDiagnostic",
+      "] e": "editor::GoToDiagnostic",
+      "[ e": "editor::GoToPrevDiagnostic",
+      "s s": "outline::Toggle",
+      "s S": "project_symbols::Toggle",
+      "space x x": "diagnostics::Deploy",
+
+      "] h": "editor::GoToHunk",
+      "[ h": "editor::GoToPrevHunk",
+
+      "shift-h": "pane::ActivatePrevItem",
+      "shift-l": "pane::ActivateNextItem",
+      "shift-q": "pane::CloseActiveItem",
+      "ctrl-q": "pane::CloseActiveItem",
+      "space b d": "pane::CloseActiveItem",
+      "space b o": "pane::CloseInactiveItems",
+      "space b b": "tab_switcher::Toggle",
+      "space space": "file_finder::Toggle",
+      "space /": "pane::DeploySearch",
+      "space e": "project_panel::ToggleFocus"
+    }
+  },
+  // Empty pane
+  {
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      "space space": "file_finder::Toggle",
+      "space f p": "projects::OpenRecent"
+    }
+  },
+  // Terminal
+  {
     "context": "Terminal",
     "bindings": {
-      "cmd-d": "workspace::NewTerminal"
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "cmd-d": "workspace::NewTerminal",
+      "cmd-shift-j": "workspace::ToggleZoom"
+    }
+  },
+  // Project Tree
+  {
+    "context": "ProjectPanel && not_editing",
+    "bindings": {
+      "a": "project_panel::NewFile",
+      "A": "project_panel::NewDirectory",
+      "r": "project_panel::Rename",
+      "d": "project_panel::Delete",
+      "x": "project_panel::Cut",
+      "c": "project_panel::Copy",
+      "p": "project_panel::Paste",
+      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  // Worksapce navigation
+  {
+    "context": "Dock",
+    "bindings": {
+      "ctrl-w h": ["workspace::ActivatePaneInDirection", "Left"],
+      "ctrl-w l": ["workspace::ActivatePaneInDirection", "Right"],
+      "ctrl-w k": ["workspace::ActivatePaneInDirection", "Up"],
+      "ctrl-w j": ["workspace::ActivatePaneInDirection", "Down"]
+    }
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "ctrl-k": "editor::ContextMenuPrev",
+      "ctrl-j": "editor::ContextMenuNext"
+    }
+  },
+  {
+    "context": "TabSwitcher",
+    "bindings": {
+      "ctrl-k": "menu::SelectPrev",
+      "ctrl-j": "menu::SelectNext"
+    }
+  },
+  {
+    "context": "FileFinder",
+    "bindings": {
+      "ctrl-k": "menu::SelectPrev",
+      "ctrl-j": "menu::SelectNext"
+    }
+  },
+  {
+    "context": "CommandPalette",
+    "bindings": {
+      "ctrl-k": "menu::SelectPrev",
+      "ctrl-j": "menu::SelectNext"
     }
   }
 ]
