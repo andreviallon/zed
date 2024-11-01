@@ -2,10 +2,10 @@
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
-      "space g h d": "editor::ToggleHunkDiff",
-      "space g h r": "editor::RevertSelectedHunks",
+      "space g d": "editor::ToggleHunkDiff",
+      "space g r": "editor::RevertSelectedHunks",
 
-      "space t i": "editor::ToggleInlayHints",
+      "space u i": "editor::ToggleInlayHints",
 
       "space m p": "markdown::OpenPreview",
       "space m P": "markdown::OpenPreviewToTheSide",

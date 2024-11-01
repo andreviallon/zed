@@ -6,8 +6,8 @@
 // To see all of Zed's default settings without changing your
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
-
 {
+  "show_inline_completions": false,
   "assistant": {
     "default_model": {
       "provider": "copilot_chat",
@@ -17,7 +17,6 @@
   },
   "collaboration_panel": { "dock": "right" },
   "project_panel": {
-    "dock": "left",
     "indent_size": 12
   },
   "autosave": "off",
