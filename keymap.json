@@ -78,6 +78,8 @@
       // LSP
       "space c a": "editor::ToggleCodeActions",
       "space c r": "editor::Rename",
+
+      // Navigation
       "g d": "editor::GoToDefinition",
       "g D": "editor::GoToDefinitionSplit",
       "g i": "editor::GoToImplementation",
