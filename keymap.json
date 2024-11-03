@@ -13,7 +13,7 @@
   {
     "context": "Terminal",
     "bindings": {
-      "cmd-d": "workspace::NewTerminal",
+      "cmd-n": "workspace::NewTerminal",
       "cmd-shift-j": "workspace::ToggleZoom"
     }
   },
@@ -35,7 +35,8 @@
     "context": "EmptyPane",
     "bindings": {
       "space space": "file_finder::Toggle",
-      "space f p": "projects::OpenRecent"
+      "space f p": "projects::OpenRecent",
+      "space /": "pane::DeploySearch"
     }
   },
   // Editor
@@ -49,7 +50,6 @@
       "space b d": "pane::CloseActiveItem",
       "space b o": "pane::CloseInactiveItems",
       "space b b": "tab_switcher::Toggle",
-      "space space": "file_finder::Toggle",
 
       // Comment
       "g c": "editor::ToggleComments",
@@ -66,6 +66,8 @@
       "space s S": "project_symbols::Toggle",
 
       // Files and search
+      "space space": "file_finder::Toggle",
+      "space f p": "projects::OpenRecent",
       "space /": "pane::DeploySearch",
       "space e": "project_panel::ToggleFocus",
 

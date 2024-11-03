@@ -8,7 +8,6 @@
 // from the command palette or from `Zed` application menu.
 {
   // General
-  "autosave": "off",
   "telemetry": {
     "diagnostics": false,
     "metrics": false
