@@ -7,7 +7,38 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "show_inline_completions": false,
+  // General
+  "autosave": "off",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+
+  // UI
+  "ui_font_family": "MesloLGM Nerd Font",
+  "buffer_font_family": "MesloLGM Nerd Font",
+  "cursor_blink": false,
+  "relative_line_numbers": true,
+  "vim_mode": true,
+  "ui_font_size": 13,
+  "buffer_font_size": 13,
+  "project_panel": {
+    "indent_size": 12
+  },
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Catppuccin Mocha"
+  },
+  "experimental.theme_overrides": {
+    "border.variant": "#ffffff25",
+    "scrollbar.thumb.background": "#70709725"
+  },
+  "indent_guides": {
+    "coloring": "indent_aware"
+  },
+
+  // Assistant
   "assistant": {
     "default_model": {
       "provider": "copilot_chat",
@@ -15,75 +46,29 @@
     },
     "version": "2"
   },
-  "collaboration_panel": { "dock": "right" },
-  "project_panel": {
-    "indent_size": 12
-  },
-  "autosave": "off",
-  "theme": {
-    "mode": "system",
-    "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha"
-  },
-  "experimental.theme_overrides": {
-    "border.variant": "#ffffff25",
-    "scrollbar.thumb.background": "#70709725"
-  },
-  "ui_font_family": "MesloLGM Nerd Font",
-  "buffer_font_family": "MesloLGM Nerd Font",
-  "cursor_blink": false,
+
+  // LSP & Formatting
   "format_on_save": "prettier",
-  "vim_mode": true,
-  "ui_font_size": 13,
-  "buffer_font_size": 13,
-  "languages": {
-    "TypeScript": {
-      "code_actions_on_format": {
-        "source.fixAll.eslint": true,
-        "source.fixAll.tslint": true,
-        "source.fixAll.stylelint": true,
-        "source.fixAll.prettier": true,
-        "source.fixAll": true
-      },
-      "prettier": {
-        "allowed": true
-      },
-      "format_on_save": "prettier"
-    },
-    "TSX": {
-      "code_actions_on_format": {
-        "source.fixAll.eslint": true,
-        "source.fixAll.tslint": true,
-        "source.fixAll.stylelint": true,
-        "source.fixAll.prettier": true,
-        "source.fixAll": true
-      },
-      "prettier": {
-        "allowed": true
-      },
-      "format_on_save": "prettier"
-    }
-  },
-  "relative_line_numbers": true,
-  "tab_bar": {
-    "show": true
-  },
-  "indent_guides": {
-    "enabled": true,
-    "coloring": "indent_aware"
-  },
-  "inlay_hints": {
-    "enabled": true
-  },
+  // "languages": {
+  //   "TypeScript": {
+  //     "code_actions_on_format": {
+  //       "source.fixAll.eslint": true,
+  //       "source.fixAll.tslint": true,
+  //       "source.fixAll.stylelint": true,
+  //       "source.fixAll.prettier": true,
+  //       "source.fixAll": true
+  //     },
+  //     "prettier": {
+  //       "allowed": true
+  //     },
+  //     "format_on_save": "prettier"
+  //   }
+  // },
   "lsp": {
     "tailwindcss-language-server": {
       "settings": {
         "classAttributes": ["class", "className", "ngClass", "styles"]
       }
     }
-  },
-  "telemetry": {
-    "diagnostics": false,
-    "metrics": false
   }
 }
