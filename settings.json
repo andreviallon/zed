@@ -15,6 +15,7 @@
   },
 
   // UI
+  "theme": "Catppuccin Mocha",
   "ui_font_family": "MesloLGM Nerd Font",
   "buffer_font_family": "MesloLGM Nerd Font",
   "cursor_blink": false,
@@ -25,10 +26,8 @@
   "project_panel": {
     "indent_size": 12
   },
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Catppuccin Mocha"
+  "outline_panel": {
+    "indent_size": 12
   },
   "experimental.theme_overrides": {
     "border.variant": "#ffffff25",
@@ -49,26 +48,19 @@
 
   // LSP & Formatting
   "format_on_save": "prettier",
-  // "languages": {
-  //   "TypeScript": {
-  //     "code_actions_on_format": {
-  //       "source.fixAll.eslint": true,
-  //       "source.fixAll.tslint": true,
-  //       "source.fixAll.stylelint": true,
-  //       "source.fixAll.prettier": true,
-  //       "source.fixAll": true
-  //     },
-  //     "prettier": {
-  //       "allowed": true
-  //     },
-  //     "format_on_save": "prettier"
-  //   }
-  // },
-  "lsp": {
-    "tailwindcss-language-server": {
-      "settings": {
-        "classAttributes": ["class", "className", "ngClass", "styles"]
-      }
+  "languages": {
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.fixAll.eslint": true,
+        "source.fixAll.tslint": true,
+        "source.fixAll.stylelint": true,
+        "source.fixAll.prettier": true,
+        "source.fixAll": true
+      },
+      "prettier": {
+        "allowed": true
+      },
+      "format_on_save": "prettier"
     }
   }
 }
