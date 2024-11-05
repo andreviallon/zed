@@ -1,20 +1,12 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run the `open default settings` command
-// from the command palette or from `Zed` application menu.
 {
   // General
+  "show_inline_completions": false,
   "telemetry": {
     "diagnostics": false,
     "metrics": false
   },
 
   // UI
-  "theme": "Catppuccin Mocha",
   "ui_font_family": "MesloLGM Nerd Font",
   "buffer_font_family": "MesloLGM Nerd Font",
   "cursor_blink": false,
@@ -28,6 +20,11 @@
   "outline_panel": {
     "indent_size": 12
   },
+  "theme": {
+    "mode": "system",
+    "dark": "Catppuccin Mocha - No Italics",
+    "light": "Catppuccin Frappé - No Italics"
+  },
   "experimental.theme_overrides": {
     "border.variant": "#ffffff25",
     "scrollbar.thumb.background": "#70709725"
@@ -39,8 +36,8 @@
   // Assistant
   "assistant": {
     "default_model": {
-      "provider": "copilot_chat",
-      "model": "gpt-4o"
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-latest"
     },
     "version": "2"
   },

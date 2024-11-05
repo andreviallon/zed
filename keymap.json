@@ -13,7 +13,7 @@
   {
     "context": "Terminal",
     "bindings": {
-      "cmd-n": "workspace::NewTerminal",
+      "cmd-t": "workspace::NewTerminal",
       "cmd-shift-j": "workspace::ToggleZoom"
     }
   },
@@ -39,7 +39,7 @@
       "space /": "pane::DeploySearch"
     }
   },
-  // Editor
+  // Vim
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
@@ -61,13 +61,10 @@
       "[ e": "editor::GoToPrevDiagnostic",
       "space x x": "diagnostics::Deploy",
 
-      // Editor
-      "sapce s s": "outline::Toggle",
-      "space s S": "project_symbols::Toggle",
-
       // Files and search
       "space space": "file_finder::Toggle",
       "space f p": "projects::OpenRecent",
+      "space f s": "project_symbols::Toggle",
       "space /": "pane::DeploySearch",
       "space e": "project_panel::ToggleFocus",
 
@@ -80,8 +77,6 @@
       // LSP
       "space c a": "editor::ToggleCodeActions",
       "space c r": "editor::Rename",
-
-      // Navigation
       "g d": "editor::GoToDefinition",
       "g D": "editor::GoToDefinitionSplit",
       "g i": "editor::GoToImplementation",
@@ -97,6 +92,7 @@
       // UI
       "space u i": "editor::ToggleInlayHints",
       "space u b": "editor::ToggleGitBlame",
+      "space u g": "copilot::Suggest",
 
       // Test
       "space t r": "task::Rerun",
