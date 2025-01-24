@@ -6,15 +6,31 @@
       "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
       "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
       "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"]
+      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "alt-p": "pane::TogglePinTab"
     }
   },
-  // Terminal
+  // Menu select
   {
-    "context": "Terminal",
+    "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
     "bindings": {
-      "cmd-t": "workspace::NewTerminal",
-      "cmd-shift-j": "workspace::ToggleZoom"
+      "ctrl-k": "editor::ContextMenuPrev",
+      "ctrl-j": "editor::ContextMenuNext"
+    }
+  },
+  {
+    "context": "TabSwitcher || FileFinder || CommandPalette",
+    "bindings": {
+      "ctrl-k": "menu::SelectPrev",
+      "ctrl-j": "menu::SelectNext"
+    }
+  },
+  // Editor
+  {
+    "context": "Editor",
+    "bindings": {
+      "shift-h": "pane::ActivatePrevItem",
+      "shift-l": "pane::ActivateNextItem"
     }
   },
   // Project Tree
@@ -22,9 +38,8 @@
     "context": "ProjectPanel && not_editing",
     "bindings": {
       "a": "project_panel::NewFile",
-      "A": "project_panel::NewDirectory",
+      "d": "project_panel::NewDirectory",
       "r": "project_panel::Rename",
-      "d": "project_panel::Delete",
       "x": "project_panel::Cut",
       "c": "project_panel::Copy",
       "p": "project_panel::Paste"
@@ -48,36 +63,27 @@
 
       // Buffer
       "space b d": "pane::CloseActiveItem",
-      "space b o": "pane::CloseInactiveItems",
+      "space b i": "pane::CloseInactiveItems",
       "space b b": "tab_switcher::Toggle",
 
-      // Comment
-      "g c": "editor::ToggleComments",
-
       // Diagnostics
-      "] d": "editor::GoToDiagnostic",
-      "[ d": "editor::GoToPrevDiagnostic",
-      "] e": "editor::GoToDiagnostic",
-      "[ e": "editor::GoToPrevDiagnostic",
-      "space x x": "diagnostics::Deploy",
+      "space d d": "diagnostics::Deploy",
+
+      // Editor
+      "alt-j": "editor::MoveLineDown",
+      "alt-k": "editor::MoveLineUp",
 
       // Files and search
       "space space": "file_finder::Toggle",
       "space f p": "projects::OpenRecent",
-      "space f s": "project_symbols::Toggle",
       "space /": "pane::DeploySearch",
       "space e": "project_panel::ToggleFocus",
 
       // Git
-      "] h": "editor::GoToHunk",
-      "[ h": "editor::GoToPrevHunk",
       "space g d": "editor::ToggleHunkDiff",
       "space g r": "editor::RevertSelectedHunks",
 
-      // LSP
-      "space c a": "editor::ToggleCodeActions",
-      "space c r": "editor::Rename",
-      "g d": "editor::GoToDefinition",
+      // Go to
       "g D": "editor::GoToDefinitionSplit",
       "g i": "editor::GoToImplementation",
       "g I": "editor::GoToImplementationSplit",
@@ -85,18 +91,25 @@
       "g T": "editor::GoToTypeDefinitionSplit",
       "g r": "editor::FindAllReferences",
 
+      // LSP
+      "space c a": "editor::ToggleCodeActions",
+      "space c r": "editor::Rename",
+
       // Markdown
       "space m p": "markdown::OpenPreview",
       "space m P": "markdown::OpenPreviewToTheSide",
 
+      // Split
+      "space s h": "pane::SplitDown",
+      "space s v": "pane::SplitRight",
+
       // UI
       "space u i": "editor::ToggleInlayHints",
       "space u b": "editor::ToggleGitBlame",
-      "space u g": "copilot::Suggest",
 
       // Test
       "space t r": "task::Rerun",
-      "space t s": "task::Spawn"
+      "space t t": "task::Spawn"
     }
   }
 ]
