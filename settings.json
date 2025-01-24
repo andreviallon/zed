@@ -20,7 +20,8 @@
     "border.variant": "#ffffff25",
     "editor.active_line_number": "#748adb",
     "scrollbar.thumb.background": "#70709725",
-    "scrollbar.thumb.border": "#70709725"
+    "scrollbar.thumb.border": "#70709725",
+    "text.accent": "#85AFF3"
   },
   "indent_guides": {
     "coloring": "indent_aware"
