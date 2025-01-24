@@ -10,29 +10,6 @@
       "alt-p": "pane::TogglePinTab"
     }
   },
-  // Menu select
-  {
-    "context": "Editor && vim_mode == visual && !VimWaiting && !VimObject",
-    "bindings": {
-      "ctrl-k": "editor::ContextMenuPrev",
-      "ctrl-j": "editor::ContextMenuNext"
-    }
-  },
-  {
-    "context": "TabSwitcher || FileFinder || CommandPalette",
-    "bindings": {
-      "ctrl-k": "menu::SelectPrev",
-      "ctrl-j": "menu::SelectNext"
-    }
-  },
-  // Editor
-  {
-    "context": "Editor",
-    "bindings": {
-      "shift-h": "pane::ActivatePrevItem",
-      "shift-l": "pane::ActivateNextItem"
-    }
-  },
   // Project Tree
   {
     "context": "ProjectPanel && not_editing",
@@ -43,6 +20,14 @@
       "x": "project_panel::Cut",
       "c": "project_panel::Copy",
       "p": "project_panel::Paste"
+    }
+  },
+  // Editor
+  {
+    "context": "Editor && (vim_mode === normarl)",
+    "bindings": {
+      "shift-h": "pane::ActivatePrevItem",
+      "shift-l": "pane::ActivateNextItem"
     }
   },
   // Empty Pane
@@ -101,7 +86,9 @@
 
       // Split
       "space s h": "pane::SplitDown",
+      "space s H": "pane::SplitUp",
       "space s v": "pane::SplitRight",
+      "space s V": "pane::SplitLeft",
 
       // UI
       "space u i": "editor::ToggleInlayHints",
