@@ -65,7 +65,7 @@
       "space e": "project_panel::ToggleFocus",
 
       // Git
-      "space g d": "editor::ToggleHunkDiff",
+      "space g d": "editor::ToggleSelectedDiffHunks",
       "space g r": "editor::RevertSelectedHunks",
 
       // Go to
