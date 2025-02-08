@@ -24,7 +24,7 @@
   },
   // Editor
   {
-    "context": "Editor && (vim_mode === normarl)",
+    "context": "Editor && vim_mode == normal",
     "bindings": {
       "shift-h": "pane::ActivatePrevItem",
       "shift-l": "pane::ActivateNextItem"
@@ -48,8 +48,8 @@
 
       // Buffer
       "space b d": "pane::CloseActiveItem",
-      "space b i": "pane::CloseInactiveItems",
-      "space b b": "tab_switcher::Toggle",
+      "space b o": "pane::CloseInactiveItems",
+      "space .": "tab_switcher::Toggle",
 
       // Diagnostics
       "space d d": "diagnostics::Deploy",
@@ -85,14 +85,15 @@
       "space m P": "markdown::OpenPreviewToTheSide",
 
       // Split
-      "space s h": "pane::SplitDown",
-      "space s H": "pane::SplitUp",
-      "space s v": "pane::SplitRight",
-      "space s V": "pane::SplitLeft",
+      "space s j": "pane::SplitDown",
+      "space s k": "pane::SplitUp",
+      "space s l": "pane::SplitRight",
+      "space s h": "pane::SplitLeft",
 
       // UI
       "space u i": "editor::ToggleInlayHints",
-      "space u b": "editor::ToggleGitBlame",
+      "space u b": "editor::ToggleGitBlameInline",
+      "space u B": "editor::ToggleGitBlame",
 
       // Test
       "space t r": "task::Rerun",
