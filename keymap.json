@@ -3,11 +3,24 @@
   {
     "context": "Pane || Workspace || Editor || Menu || Terminal || Assistant || Dock || EmptyPane || SharedScreen || VimControl || vim_mode == normal",
     "bindings": {
-      "ctrl-h": ["workspace::ActivatePaneInDirection", "Left"],
-      "ctrl-l": ["workspace::ActivatePaneInDirection", "Right"],
-      "ctrl-k": ["workspace::ActivatePaneInDirection", "Up"],
-      "ctrl-j": ["workspace::ActivatePaneInDirection", "Down"],
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-j": "workspace::ActivatePaneDown",
       "alt-p": "pane::TogglePinTab"
+    }
+  },
+  // Git Panel
+  {
+    "context": "GitPanel",
+    "bindings": {
+      "s": "git::StageAll",
+      "u": "git::UnstageAll",
+      "f": "git::Fetch",
+      "p": "git::Pull",
+      "P": "git::Push",
+      "c": "git::Commit",
+      "a": "git::Uncommit"
     }
   },
   // Project Tree
@@ -26,7 +39,7 @@
   {
     "context": "Editor && vim_mode == normal",
     "bindings": {
-      "shift-h": "pane::ActivatePrevItem",
+      "shift-h": "pane::ActivatePreviousItem",
       "shift-l": "pane::ActivateNextItem"
     }
   },
@@ -66,7 +79,8 @@
 
       // Git
       "space g d": "editor::ToggleSelectedDiffHunks",
-      "space g r": "editor::RevertSelectedHunks",
+      "space g r": "git::Restore",
+      "space g b": "git::Branch",
 
       // Go to
       "g D": "editor::GoToDefinitionSplit",
@@ -93,7 +107,7 @@
       // UI
       "space u i": "editor::ToggleInlayHints",
       "space u b": "editor::ToggleGitBlameInline",
-      "space u B": "editor::ToggleGitBlame",
+      "space u B": "git::Blame",
 
       // Test
       "space t r": "task::Rerun",
